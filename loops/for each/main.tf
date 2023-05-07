@@ -4,7 +4,7 @@ resource "null_resource" "fruits" {
 for_each = var.fruits
 
   provisioner "local-exec" {
-  commamd ="echo first name - ${each key}-${each value}"
+  commamd ="echo first name - ${[each key]}-${[each value]}"
     #command = "echo fruit name - ${var.fruits[count.index]}"
  }
 }
