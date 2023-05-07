@@ -6,11 +6,11 @@ resource "null_resource" "null" {
 resource "null_resource" "fruits" {
   count = length(var.fruits)
 
-}
- provisinor "local-exec" {
-   command = "echo fruit name - ${var.fruits[count.index]}"
- }
 
+  provisinor "local-exec" {
+    command = "echo fruit name - ${var.fruits[count.index]}"
+  }
+}
 variable "fruits" {
   default = ["apple","banana","orange"]
 }
