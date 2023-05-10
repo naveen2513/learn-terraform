@@ -19,6 +19,10 @@ variable "sample2" {
     b = 20
   }
 }
+#output "sample2" {
+ # value = lookup(var.sample2, "a2", "dummy" )
+#}
+
 output "sample2" {
-  value = lookup(var.sample2, "a2", "dummy" )
+  value = lookup(var.sample2, "a1", "dummy" )
 }
