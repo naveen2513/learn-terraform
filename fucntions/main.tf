@@ -5,3 +5,11 @@ variable "sample" {
 output "sample" {
   value = upper(var.sample)
 }
+
+variable "sample1" {
+  default = ["abc", "efg"]
+}
+
+output "sample1" {
+  value = element("var.sample", 1)
+}
