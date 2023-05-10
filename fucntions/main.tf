@@ -3,5 +3,5 @@ variable "sample" {
   default = "abc"
 }
 output "sample" {
-  value = "var.sample"
+  value = var.sample
 }
