@@ -13,3 +13,12 @@ variable "sample1" {
 output "sample1" {
   value = element(var.sample1, 1)
 }
+variable "sample2" {
+  default = {
+    a = 10
+    b = 20
+  }
+}
+output "sample2" {
+  value = lookup(sample2, "a2", "dummy" )
+}
